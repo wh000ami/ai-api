@@ -8,6 +8,7 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: python3 -V
+      - run: ls
       - run: python3 -m pip install -r .github/workflows/requirements.txt
       - run: python3 -m black . -l 120 --check --verbose --diff --color
       - run: python3 -m pytest . -s
