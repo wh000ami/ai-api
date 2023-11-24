@@ -5,9 +5,6 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    with:
-        PROJECT_PATH: app
-        REQUIREMENT_PATH: app/requirements.txt
     steps:
       - name: Trigger info
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
