@@ -6,14 +6,20 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Trigger info
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Python version
       - run: python3 -V
-      - run: ls
-      - run: python3 -m pip install -r .github/workflows/requirements.txt
+      - name: Installing Python3 requirements
+      - run: python3 -m pip install -r ../../requirements.txt
+      - name: Balck checks
       - run: python3 -m black . -l 120 --check --verbose --diff --color
+      - name: Testing
       - run: python3 -m pytest . -s
+      - name: Complete info
       - run: echo "All checks passed successfully! ✅"
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Complete info
       - run: echo "Deployment was successful! ✅"
