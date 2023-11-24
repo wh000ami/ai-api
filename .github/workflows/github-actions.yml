@@ -12,7 +12,7 @@ jobs:
         run: python3 -V
       - run: ls && pwd
       - name: Installing Python3 requirements
-        run: python3 -m pip install -r requirements.txt
+        run: python3 -m pip install -r /home/runner/work/ai-api/requirements.txt
       - name: Balck checks
         run: python3 -m black . -l 120 --check --verbose --diff --color
       - name: Testing
