@@ -10,7 +10,7 @@ jobs:
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Python version
         run: python3 -V
-      - run: ls -la .. && ls -la ../../ && ls -la ../../../
+      - run: ls -la ai-api
       - name: Installing Python3 requirements
         run: python3 -m pip install -r ../../requirements.txt
       - name: Balck checks
