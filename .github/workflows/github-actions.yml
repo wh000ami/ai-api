@@ -10,13 +10,8 @@ jobs:
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Python version
         run: python3 -V
-      - run: ls -la && pwd && ls ../ -la
-      - name: Copying Python3 requirements
-        with:
-          PROJECT_PATH: project_folder
-          REQUIREMENT_PATH: project_folder/requirements.txt
       - name: Installing Python3 requirements
-        run: python3 -m pip install -r project_folder/requirements.txt
+        run: python3 -m pip install -r requirements.txt
       - name: Balck checks
         run: python3 -m black . -l 120 --check --verbose --diff --color
       - name: Testing
