@@ -5,15 +5,15 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+    with:
+        PROJECT_PATH: app
+        REQUIREMENT_PATH: app/requirements.txt
     steps:
       - name: Trigger info
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Python version
       - run: python3 -V
       - run: ls && pwd
-      with:
-          PROJECT_PATH: app
-          REQUIREMENT_PATH: app/requirements.txt
       - name: Installing Python3 requirements
       - run: python3 -m pip install -r app/requirements.txt
       - name: Balck checks
