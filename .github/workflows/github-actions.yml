@@ -1,4 +1,4 @@
-name: App
+name: AiApp
 
 on: [push]
 
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
       steps:
         - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-  deploy:
-    runs-on: ubuntu-latest
-      steps:
-        - run: echo "Deployment was successful! ✅"
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #     steps:
+  #       - run: echo "Deployment was successful! ✅"
