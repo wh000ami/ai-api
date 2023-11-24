@@ -25,7 +25,7 @@ jobs:
       - name: complete info
         run: echo "All checks passed successfully! ✅"
   deploy:
-    needs: [tests]
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: complete info
