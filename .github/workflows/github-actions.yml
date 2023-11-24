@@ -11,10 +11,10 @@ jobs:
       - name: Python version
       - run: python3 -V
       - run: ls && pwd
-      with:
-          PROJECT_PATH: app
-          REQUIREMENT_PATH: app/requirements.txt
       - name: Installing Python3 requirements
+        with:
+            PROJECT_PATH: app
+            REQUIREMENT_PATH: app/requirements.txt
       - run: python3 -m pip install -r app/requirements.txt
       - name: Balck checks
       - run: python3 -m black . -l 120 --check --verbose --diff --color
