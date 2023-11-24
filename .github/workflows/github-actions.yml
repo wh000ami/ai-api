@@ -8,6 +8,10 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: python3 -V
+      - run: pip3 install -r requirements.txt
+      - run: black . -l 120 --check --verbose --diff --color
+      - run: pytest tests/ -s
+      - run: echo "All checks passed successfully! ✅"
   deploy:
     runs-on: ubuntu-latest
     steps:
