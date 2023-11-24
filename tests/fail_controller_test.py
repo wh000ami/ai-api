@@ -14,4 +14,4 @@ def test_unkown_url():
 def test_wrong_model_name():
     response = client.post("/generate", json={"model": "wrong", "message": "hello friend"})
     assert response.status_code == 405
-    assert response.json() == {'detail': {'error': 'Model name must be `gtp2` or `gtp2-large` not wrong'}}
+    assert response.json() == {"detail": {"error": "Model name must be `gtp2` or `gtp2-large` not wrong"}}
